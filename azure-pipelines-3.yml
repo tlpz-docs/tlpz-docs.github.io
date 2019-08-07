@@ -1,0 +1,25 @@
+# Publish GitHub Pages
+# azure-pipelines.yml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'Ubuntu-16.04'
+
+steps:
+- script: |
+    ./docs.sh
+    git config --local user.name "tkonradsson"
+    git config --local user.email "tkonradsson@vectoritcgroup.com"
+    git add .
+    git commit -m "Publishing GitHub Pages  ***NO_CI***"
+  displayName: 'Build and commit pages'
+
+- script: |
+    git remote set-url --push origin git@github.com:tlpz-docs/tlpz-docs.github.io.git
+    git push origin HEAD:master
+  displayName: 'Publish GitHub Pages'
+  condition: |
+    and(not(eq(variables['Build.Reason'], 'PullRequest')),
+        eq(variables['Build.SourceBranch'], 'refs/heads/master'))
