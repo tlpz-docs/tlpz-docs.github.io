@@ -3,7 +3,7 @@
 # docs.sh
 
 ROOT=$(cd `dirname $0` && pwd)
-SRC_DIR=$ROOT
+SRC_DIR=$ROOT/src
 DEST_DIR=$ROOT
 
 NOW=$(date)
