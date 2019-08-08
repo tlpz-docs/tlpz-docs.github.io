@@ -9,7 +9,6 @@ pool:
 
 steps:
 - script: |
-    ./docs.sh
     git config --local user.name "tkonradsson"
     git config --local user.email "tkonradsson@vectoritcgroup.com"
     git add .
