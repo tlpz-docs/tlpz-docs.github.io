@@ -9,7 +9,7 @@ pool:
 
 steps:
 - script: |
-    git config --local user.name "tkonradsson"
+    git config --local user.name "tlpz-docs"
     git config --local user.email "tkonradsson@vectoritcgroup.com"
     git add .
     git commit -m "Publishing GitHub Pages  ***NO_CI***"
