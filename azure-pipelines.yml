@@ -11,7 +11,7 @@ steps:
 - script: |
     git config --local user.name "tlpz-docs"
     git config --local user.email "tkonradsson@vectoritcgroup.com"
-    git add --all
+    git add .
     git commit -m "Publishing GitHub Pages"
   displayName: 'Build and commit pages'
 
