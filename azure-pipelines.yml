@@ -9,8 +9,8 @@ pool:
 
 steps:
 - script: |
-    git config --local user.name "Azure Pipelines"
-    git config --local user.email "azuredevops@microsoft.com"
+    git config --local user.name "tlpz-docs"
+    git config --local user.email "tkonradsson@vectoritcgroup.com"
     git pull remote
     git add .
     git commit -m "Publishing GitHub Pages  ***NO_CI***"
