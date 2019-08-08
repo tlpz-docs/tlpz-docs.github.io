@@ -9,8 +9,6 @@ pool:
 
 steps:
 - script: |
-    git config --local user.name "tlpz-docs"
-    git config --local user.email "tkonradsson@vectoritcgroup.com"
     git add index.html
     git commit -m "Publishing GitHub Pages  ***NO_CI***"
   displayName: 'Build and commit pages'
