@@ -12,7 +12,7 @@ steps:
     git config --local user.name "tlpz-docs"
     git config --local user.email "tkonradsson@vectoritcgroup.com"
     git checkout master
-    git add .
+    git add -A
     git commit -m "Publishing GitHub Pages"
   displayName: 'Build and commit pages'
 
