@@ -11,7 +11,7 @@ steps:
 - script: |
     git config --local user.name "tlpz-docs"
     git config --local user.email "tkonradsson@vectoritcgroup.com"
-    git pull origin master
+    git pull git@github.com:tlpz-docs/tlpz-docs.github.io.git
     git add .
     git commit -m "Publishing GitHub Pages  ***NO_CI***"
   displayName: 'Build and commit pages'
