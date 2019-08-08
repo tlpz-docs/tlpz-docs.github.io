@@ -11,7 +11,7 @@ steps:
 - script: |
     git config --local user.name "tlpz-docs"
     git config --local user.email "tkonradsson@vectoritcgroup.com"
-    git fetch https://github.com/tlpz-docs/tlpz-docs.github.io.git
+    git remote set-url --push origin git@github.com:tlpz-docs/tlpz-docs.github.io.git
     git pull https://github.com/tlpz-docs/tlpz-docs.github.io
     git add .
     git commit -m "Publishing GitHub Pages  ***NO_CI***"
