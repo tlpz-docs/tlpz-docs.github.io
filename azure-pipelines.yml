@@ -26,7 +26,7 @@ steps:
     chmod 700 ~/.ssh && chmod 600 ~/.ssh/id_rsa
     ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
     git remote set-url --push origin git@github.com:tlpz-docs/tlpz-docs.github.io.git
-    git push origin HEAD:master
+    git push origin master
   displayName: 'Publish GitHub Pages'
   condition: |
     and(not(eq(variables['Build.Reason'], 'PullRequest')),
