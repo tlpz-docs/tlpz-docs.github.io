@@ -1,4 +1,10 @@
 # Publish GitHub Pages
+- task: CmdLine@2
+  inputs:
+    script: |
+      echo Write your commands here
+      
+      echo Hello world
 # azure-pipelines.yml
 
 trigger:
