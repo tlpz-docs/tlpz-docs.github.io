@@ -8,12 +8,22 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 steps:
+<<<<<<< HEAD
 - script: |
     git config --local user.name "tlpz-docs"
     git config --local user.email "tkonradsson@vectoritcgroup.com"
     git pull https://github.com/tlpz-docs/tlpz-docs.github.io.git
     git add .
     git commit -m "Publishing GitHub Pages  ***NO_CI***"
+=======
+- checkout: self
+- script: |
+    git config --local user.name "tlpz-docs"
+    git config --local user.email "tkonradsson@vectoritcgroup.com"
+    git checkout master
+    git add origin git@ssh.dev.azure.com:v3/TelepizzaIT/Documentation/Documentation
+    git commit -m "Publishing GitHub Pages"
+>>>>>>> 9a4b78102d7f12b894770481212cb0c53e0e87c8
   displayName: 'Build and commit pages'
 
 - task: DownloadSecureFile@1
@@ -26,7 +36,11 @@ steps:
     chmod 700 ~/.ssh && chmod 600 ~/.ssh/id_rsa
     ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
     git remote set-url --push origin git@github.com:tlpz-docs/tlpz-docs.github.io.git
+<<<<<<< HEAD
     git push origin HEAD:master
+=======
+    git push origin master
+>>>>>>> 9a4b78102d7f12b894770481212cb0c53e0e87c8
   displayName: 'Publish GitHub Pages'
   condition: |
     and(not(eq(variables['Build.Reason'], 'PullRequest')),
