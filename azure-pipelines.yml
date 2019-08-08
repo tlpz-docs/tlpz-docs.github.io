@@ -13,7 +13,6 @@ steps:
     git commit -m "Publishing GitHub Pages  ***NO_CI***"
   displayName: 'Build and commit pages'
 
-
 - task: DownloadSecureFile@1
   inputs:
     secureFile: deploy_key
