@@ -8,6 +8,10 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 steps:
+- checkout: self
+  displayName: 'Lollifer'
+
+steps:
 - script: |
     git config --local user.name "tlpz-docs"
     git config --local user.email "tkonradsson@vectoritcgroup.com"
